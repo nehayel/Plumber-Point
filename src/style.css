@@ -1,0 +1,39 @@
+.rel {
+  position: relative;
+}
+.rel::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -46px;
+  background-color: #e6e6eb;
+  height: 100%;
+  width: 1px;
+}
+
+ul.slick-dots li {
+  /* background: red; */
+  background: #e2e2e2;
+  width: 6px;
+  height: 6px;
+  color: transparent;
+  border-radius: 100%;
+  cursor: pointer;
+}
+ul.slick-dots li button {
+  cursor: pointer;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  border: none;
+}
+li.slick-active button {
+  background-color: #dd3142;
+}
+ul.slick-dots {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 25px;
+  margin-right: 3px;
+}

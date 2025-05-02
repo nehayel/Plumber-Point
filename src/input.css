@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@layer utilities {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+  .roboto {
+    font-family: "Roboto", sans-serif;
+  }
+  .Bricolage {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+  .mukta {
+    font-family: "Mukta", sans-serif;
+  }
+  .header-shadow {
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+  }
+  .ovarlay {
+    background: linear-gradient(to right, #dd3142, #c4c4c400);
+  }
+  .service-card-shadow {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+  }
+}
+@layer components {
+  .header-hover {
+    @apply relative after:absolute after:content-[''] after:top-[18px] after:left-0 after:h-[2px] after:w-[100%] after:bg-[#dd3142] after:transform after:scale-x-0 mt-[20px] hover:after:scale-x-100 after:duration-250 hover:font-bold;
+  }
+
+  .active {
+    @apply relative after:absolute after:content-[''] after:top-[18px] after:left-0 after:h-[2px] after:w-[100%] after:bg-[#dd3142] mt-[20px];
+  }
+  .contact-placeholder {
+    @apply placeholder:text-[#000000] placeholder:font-normal placeholder:text-base  leading-[1] w-[513px] text-base text-[#000] border-b border-[#707070] pb-[12px] focus:outline-0;
+  }
+}
+@layer base {
+  h2 {
+    color: #000;
+    font-size: 44px;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
